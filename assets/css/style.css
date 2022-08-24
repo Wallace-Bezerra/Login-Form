@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    display: inline-block;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 720px; */
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px;
+}
+
+.left-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    /* padding: 20px; */
+}
+
+.formulario {
+    /* max-width: 400px; */
+    /* height: 512px; */
+    margin: 20px 74px;
+    background-color: var(--form-background);
+    padding: 55px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.info-login {
+    display: flex;
+    gap: 10px;
+}
+
+.info-login h1 {
+    color: var(--text-title);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.info p {
+    color: var(--text-base);
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.formulario label {
+    color: var(--text-base);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    background-color: transparent;
+    width: 335px;
+    height: 44px;
+    border: 1px solid var(--text-base);
+    border-radius: 4px;
+}
+
+.formulario a {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.formulario span {
+    font-weight: 400;
+    color: var(--primary-color);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+button {
+    background-color: var(--primary-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #473404;
+}
+
+.right-area img {
+    max-width: 100%;
+    width: 620px;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+}
