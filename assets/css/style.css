@@ -6,6 +6,7 @@
     --background: #191816;
     --form-background: #24221f;
     --primary-color: #ffc632;
+
 }
 
 * {
@@ -15,6 +16,12 @@
     list-style: none;
     box-sizing: border-box;
     color: inherit;
+}
+
+html {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 img {
@@ -30,25 +37,22 @@ a {
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 720px; */
     background-color: var(--background);
     font-family: 'Poppins', sans-serif;
 }
 
 .logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 40px;
+    align-self: flex-start;
+    padding-left: 40px;
+    padding-top: 20px;
 }
 
 .left-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
-    /* padding: 20px; */
+    flex-direction: column;
+    gap: 20px;
 }
 
 .formulario {
@@ -74,6 +78,10 @@ a {
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
+}
+
+.info {
+    margin-bottom: 27px;
 }
 
 .info p {
@@ -104,6 +112,7 @@ a {
     font-size: 14px;
     padding-block: 14px;
     padding-left: 41px;
+    margin-bottom: 20px;
     line-height: 16px;
     color: #A9AFB9;
 }
@@ -115,32 +124,58 @@ a {
     outline-style: solid;
 }
 
+input {
+    color-scheme: dark;
+}
+
 .formulario label {
     position: relative;
+    margin-bottom: 5px;
 }
 
 .formulario label[for="email"]::after {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 43px;
     left: -41px;
     background-image: url(/assets/img/mail.svg);
     display: inline-block;
     position: relative;
-    /* top: 5px; */
     width: 20px;
     height: 20px;
-    /* background-color: white; */
+}
+
+.formulario label[for="senha"]::after {
+    content: "";
+    position: absolute;
+    top: 43px;
+    left: -39px;
+    background-image: url(/assets/img/lock.svg);
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.chekbox-wrapper label {
+    margin-bottom: 0px;
 }
 
 .reset-senha {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chekbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .checkbox {
-    /* display: none; */
     appearance: none;
     display: inline-block;
     border: 1px solid #868686;
@@ -163,8 +198,6 @@ a {
     transform: rotate(-45deg);
     border-left: 2px solid #473404;
     border-bottom: 2px solid #473404;
-
-    /* background-color: blue; */
 }
 
 .checkbox:checked {
@@ -215,6 +248,7 @@ button {
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #473404;
+    cursor: pointer;
 }
 
 .right-area img {
@@ -223,4 +257,22 @@ button {
     height: 100vh;
     object-fit: cover;
     object-position: right;
+}
+
+.conta {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+@media(max-width:1200px) {
+    .container {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .right-area {
+        display: none;
+    }
 }
