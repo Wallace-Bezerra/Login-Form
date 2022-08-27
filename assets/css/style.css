@@ -107,7 +107,8 @@ a {
 }
 
 .formulario input[type="email"],
-.formulario input[type="password"] {
+.formulario input[type="password"],
+.formulario input[type="text"]  {
     background-color: transparent;
     max-width: 335px;
     height: 44px;
@@ -163,8 +164,7 @@ input {
     width: 20px;
     height: 20px;
 }
-.info p::after{
-    content: "";
+.eye{
     position: absolute;
     bottom: 218px;
     right: 12px;
@@ -173,6 +173,7 @@ input {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    transition: background-image .3s ;
 }
 
 .chekbox-wrapper label {
