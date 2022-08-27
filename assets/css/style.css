@@ -145,7 +145,7 @@ input {
     position: absolute;
     top: 43px;
     left: -41px;
-    background-image: url(/assets/img/mail.svg);
+    background-image: url(../img/mail.svg);
     display: inline-block;
     position: relative;
     width: 20px;
@@ -157,7 +157,7 @@ input {
     position: absolute;
     top: 43px;
     left: -39px;
-    background-image: url(/assets/img/lock.svg);
+    background-image: url(../img/lock.svg);
     display: inline-block;
     position: relative;
     width: 20px;
@@ -168,7 +168,7 @@ input {
     position: absolute;
     bottom: 218px;
     right: 12px;
-    background-image: url(/assets/img/eye.svg);
+    background-image: url(../img/eye.svg);
     display: inline-block;
     width: 20px;
     height: 20px;
