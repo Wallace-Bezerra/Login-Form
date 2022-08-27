@@ -39,28 +39,35 @@ a {
     justify-content: space-between;
     background-color: var(--background);
     font-family: 'Poppins', sans-serif;
+
 }
 
 .logo {
+    width: 220px;
     align-self: flex-start;
     padding-left: 40px;
-    padding-top: 20px;
+    padding-top: 43px;
 }
+
 
 .left-area {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 105px;
+    width: 100%;
 }
-
-.formulario {
-    /* max-width: 400px; */
-    /* height: 512px; */
-    margin: 20px 74px;
+.form-container{
     background-color: var(--form-background);
-    padding: 55px 120px;
+    justify-content: center;
+    display: flex;
+    max-width: 575px;
+    width: 100%;
+    border-radius: 12px;
+}
+.formulario {
+    /* margin: 20px 74px; */
+    padding-block: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +109,7 @@ a {
 .formulario input[type="email"],
 .formulario input[type="password"] {
     background-color: transparent;
-    width: 335px;
+    max-width: 335px;
     height: 44px;
     border: 1px solid var(--text-base);
     border-radius: 4px;
@@ -253,10 +260,10 @@ button {
 
 .right-area img {
     max-width: 100%;
-    width: 620px;
+    width: 1000px;
     height: 100vh;
     object-fit: cover;
-    object-position: right;
+    object-position: left;
 }
 
 .conta {
@@ -274,5 +281,22 @@ button {
 
     .right-area {
         display: none;
+    }
+}
+@media(max-width:620px){
+    .container{
+        padding-inline:15px;
+    }
+    .form-container{
+        background-color: transparent;
+    }
+    .left-area{
+        gap: 0px;
+    }
+    .logo{
+        width: 181px;
+        align-self: start;
+        padding-top: 43px;
+        padding-left: 49px;
     }
 }
