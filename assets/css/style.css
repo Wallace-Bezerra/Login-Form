@@ -163,6 +163,17 @@ input {
     width: 20px;
     height: 20px;
 }
+.info p::after{
+    content: "";
+    position: absolute;
+    bottom: 218px;
+    right: 12px;
+    background-image: url(/assets/img/eye.svg);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
 
 .chekbox-wrapper label {
     margin-bottom: 0px;
