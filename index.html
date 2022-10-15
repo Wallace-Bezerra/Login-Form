@@ -22,13 +22,16 @@
                         </div>
                         <p>Entre com suas informações de cadastro.</p>
                     </div>
-                    <label for="email">E-mail</label>
-                    <input type="email" placeholder="Digite seu e-mail" id="email">
-                    <label for="senha">Senha</label>
-                    <input type="password" placeholder="Digite sua senha" id="senha">
-                    <span class="eye">
-
-                    </span>
+                    <div class="emailContainer">
+                        <label for="email">E-mail</label>
+                        <input type="email" placeholder="Digite seu e-mail" id="email" required>
+                    </div>
+                    <div class="passwordContainer">
+                        <label for="senha">Senha</label>
+                        <input type="password" placeholder="Digite sua senha" id="senha">
+                        <span class="eye"></span>
+                    </div>
+                    <span class="erroMsg">Senha deve conter 8 caracteres.</span>
                     <div class="reset-senha">
                         <div class="chekbox-wrapper">
                             <input class="checkbox" type="checkbox" id="lembrar">

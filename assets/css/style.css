@@ -18,11 +18,6 @@
     color: inherit;
 }
 
-html {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-}
 
 img {
     max-width: 100%;
@@ -32,9 +27,7 @@ a {
     display: inline-block;
 }
 
-
 .container {
-    height: 100vh;
     display: flex;
     justify-content: space-between;
     background-color: var(--background);
@@ -54,10 +47,12 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 105px;
+    flex-grow: 60%;
+    gap: 40px;
     width: 100%;
 }
-.form-container{
+
+.form-container {
     background-color: var(--form-background);
     justify-content: center;
     display: flex;
@@ -65,8 +60,8 @@ a {
     width: 100%;
     border-radius: 12px;
 }
+
 .formulario {
-    /* margin: 20px 74px; */
     padding-block: 55px;
     display: flex;
     flex-direction: column;
@@ -106,11 +101,16 @@ a {
     line-height: 24px;
 }
 
+.formulario .passwordContainer {
+    position: relative;
+}
+
 .formulario input[type="email"],
 .formulario input[type="password"],
-.formulario input[type="text"]  {
+.formulario input[type="text"] {
     background-color: transparent;
     max-width: 335px;
+    width: 100%;
     height: 44px;
     border: 1px solid var(--text-base);
     border-radius: 4px;
@@ -120,6 +120,7 @@ a {
     font-size: 14px;
     padding-block: 14px;
     padding-left: 41px;
+    margin-top: 4px;
     margin-bottom: 20px;
     line-height: 16px;
     color: #A9AFB9;
@@ -130,6 +131,29 @@ a {
     outline-color: #FFC632;
     outline-width: 2px;
     outline-style: solid;
+}
+
+.formulario input.error {
+    transition: border .4s;
+    border: 2px solid rgb(179, 36, 25);
+}
+
+.erroMsg {
+    display: none;
+}
+
+.erroMsg.ativo {
+    display: block;
+    position: relative;
+    bottom: 13px;
+}
+
+.formulario input:focus-visible {
+    outline: transparent;
+}
+
+.formulario input.error:focus {
+    outline-color: transparent;
 }
 
 input {
@@ -164,16 +188,17 @@ input {
     width: 20px;
     height: 20px;
 }
-.eye{
+
+.eye {
     position: absolute;
-    bottom: 218px;
-    right: 12px;
+    bottom: 32px;
+    right: 14px;
     background-image: url(../img/eye.svg);
     display: inline-block;
     width: 20px;
     height: 20px;
     cursor: pointer;
-    transition: background-image .3s ;
+    transition: background-image .3s;
 }
 
 .chekbox-wrapper label {
@@ -191,7 +216,7 @@ input {
 .chekbox-wrapper {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .checkbox {
@@ -223,25 +248,6 @@ input {
     background-color: var(--primary-color);
 }
 
-/* .lembrar {
-    display: flex;
-    gap: 10px;
-}
-
-.lembrar::before {
-    content: "";
-    display: inline-block;
-    border: 1px solid #868686;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-}
-
-.checkbox:checked+.lembrar::before {
-    background-color: var(--primary-color);
-} */
-
 .formulario a {
     color: var(--primary-color);
     font-weight: 600;
@@ -271,9 +277,9 @@ button {
 }
 
 .right-area img {
-    max-width: 100%;
-    width: 1000px;
-    height: 100vh;
+    max-width: 1060px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: left;
 }
@@ -295,17 +301,21 @@ button {
         display: none;
     }
 }
-@media(max-width:620px){
-    .container{
-        padding-inline:15px;
+
+@media(max-width:620px) {
+    .container {
+        padding-inline: 15px;
     }
-    .form-container{
+
+    .form-container {
         background-color: transparent;
     }
-    .left-area{
+
+    .left-area {
         gap: 0px;
     }
-    .logo{
+
+    .logo {
         width: 181px;
         align-self: start;
         padding-top: 43px;
