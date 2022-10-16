@@ -30,7 +30,7 @@ btn.addEventListener("click", (event) => {
       const erroMsg = document.createElement("span")
       document.querySelector("#email").classList.add("error");
       erroMsg.classList.add("erroMsg", "ativo");
-      erroMsg.innerText = "Email não valido."
+      erroMsg.innerText = "Email não é valido."
       email.appendChild(erroMsg);
     }
     else {
