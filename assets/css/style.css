@@ -27,12 +27,14 @@ a {
     display: inline-block;
 }
 
+body {
+    background-color: var(--background);
+}
+
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: var(--background);
     font-family: 'Poppins', sans-serif;
-
 }
 
 .logo {
@@ -293,10 +295,6 @@ button {
 }
 
 @media(max-width:1200px) {
-    .container {
-        display: inline-block;
-        width: 100%;
-    }
 
     .left-area {
         padding-bottom: 60px;
